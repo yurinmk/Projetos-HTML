@@ -1,0 +1,82 @@
+*{
+    padding: 0;
+    margin: 0;
+    outline: nome;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #41002d;
+}
+input{
+    margin: 2px;
+    border: none;
+    border-radius: 5px;
+}
+/* vai estilizar todos os elementos inputs do tipo text */
+input[type=text]{
+    width: calc(115% - 4px);
+    height: 30px;
+}
+/* vai estilizar todos os elementos inputs do tipo button 
+    transition: ease 0.2s faz com que o houver demore 0.2 segundos para perder o brilho de 50% 
+    cursor: pointer faz o cursor do mouse quando passado encima do elemento se transforme na mão de clicar
+*/
+input[type=button]{
+    width: 100px;
+    height: 50px;
+    margin: 2px;
+    transition: ease 0.2s;
+    cursor: pointer;
+}
+/* houver faz com que quando o mouse esteja encima do elemento, ele perca 50% do seu brilho */
+input[type=button]:hover{
+    filter: brightness(50%);
+}
+/* active faz o elemento diminuir o tamanho ao ser clicado */
+input[type=button]:active{
+    transform: scale(0.9);
+}
+div#inputs div{
+    flex-direction: column;
+}
+select{
+    margin-left: 45px;
+}
+div#calculadora div{
+  display: flex;
+}
+div#quarta input:nth-child(1){
+    background: #10f0ac;
+}
+
+div#quarta input:nth-child(3){
+    background: #1142e2;
+    color: #fff;
+}
+a#historico{
+    padding: 5px 30px;
+    color: #fff;
+    text-decoration: none;
+    
+}
+div#conteudo{
+   height: 50px;
+}
+textarea{
+    width: 310px;
+    margin-top: 5px;
+    resize: none;
+    filter: brightness(70%);
+}
+h2{
+    margin-left: 14%;
+    color: blanchedalmond;
+}
+
+

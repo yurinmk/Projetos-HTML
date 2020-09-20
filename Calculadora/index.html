@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script language="JavaScript" src="calculadora.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Calculadora</title>
+    <!-- precisa ser importado para a animação funcionar -->
+    <script src="https://keycdn.layerjs.org/libs/layerjs/layerjs-0.6.4.min.js"></script>
+    <link href="https://keycdn.layerjs.org/libs/layerjs/layerjs-0.6.4.css" type="text/css" rel="stylesheet" /> 
+
+</head>
+<body>
+    <form action="" name="calc">
+        <h2>Calculadora Simples</h2>
+        <div id="calculadora">
+
+            <div>
+                <div id="inputs">
+                    <div >
+                        <input type="text" id="visor1" name="visor1"/>
+                        <input type="text" id="visor2" name="visor2"/>
+                    </div>
+                </div> 
+
+                <div id="combo">
+                    <select name="cboperacao" id="cboperacao">
+                        <option value="">Operações</option>
+                        <option value="+">Somar</option>
+                        <option value="-">Subtrair</option>
+                        <option value="*">Multiplicar</option>
+                        <option value="/">Dividir</option>
+                    </select>
+                </div>
+            </div>
+             
+                     
+            <div id="primeira">
+                <input type="button" value="7" class="botao borda" onclick="botao(value)"/>
+                <input type="button" value="8" class="botao borda" onclick="botao(value)"/>
+                <input type="button" value="9" class="botao borda" onclick="botao(value)"/>
+                <!-- referencia a id mostrar da camada layer com a função !toggle que é 
+                    abrir e fechar a animação clicando no mesmo elemento  -->
+                <a id="historico" href="#mostrar.!toggle">Histórico</a>
+                
+            </div>
+
+            <div id="segunda">
+                <input type="button" value="4" class="botao borda" onclick="botao(value)"/>
+                <input type="button" value="5" class="botao borda" onclick="botao(value)"/>
+                <input type="button" value="6" class="botao borda" onclick="botao(value)"/>
+            </div>
+
+            <div id="terceira">
+                <input type="button" value="1" class="botao borda" onclick="botao(value)"/>
+                <input type="button" value="2" class="botao borda" onclick="botao(value)"/>
+                <input type="button" value="3" class="botao borda" onclick="botao(value)"/>
+            </div>
+
+            <div  id="quarta">
+                <input type="button" value="C" class="botao borda" onclick="reseta()"/>
+                <input type="button" value="0" class="botao borda" onclick="botao(value)"/>
+                <input type="button" value="Enter" class="botao borda" onclick="enter()"/>
+            </div>
+            <!-- Animação baseada no site layerJS -->
+            <!-- lj-type="stage" significa o palco da animação 
+                lj-transition="inouttop" faz ficar na altura maxima
+                lj-type="layer" div camada da animação
+                lj-transition="inouttop" faz com que a animação desça suavimente
+                lj-default-frame="!none" faz com que a layer já inicie aparecendo
+                lj-type="frame" div de frame onde vai o conteudo animado
+            -->
+            <div id="conteudo" lj-type="stage" lj-auto-height="true" >
+                <div id="mostrar" lj-type="layer" lj-transition="inouttop" lj-default-frame="!none" >
+                    <div class="slide" lj-type="frame" lj-name="frame1" lj-fit-to="responsive-width">
+                        <textarea name="txtHistorico" id="txtHistorico" cols="30" rows="10"></textarea>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </form>
+</body>
+</html>
