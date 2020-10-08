@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="questao6.css">
+    <script src="questao6.js"></script>
+    <title>6º Questão</title>
+</head>
+<body>
+    <form action="" name="calc" id="formCalc">
+        <div class="container">
+            <div class="card-text">
+                <div class="link">
+                    </br>
+                    <a href="../questoes.html">HOME</a>
+                </div>
+                <div>
+                    <input type="text" id="valor1" placeholder="1º Valor"/>
+                </div>
+                <div>
+                    <input type="text" id="valor2"  placeholder="1º Valor"/>
+                </div>
+                <table>
+                    <caption>Código de Seleção</caption>
+                    <thead>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Somar</td>
+                            <td>Multiplicar</td>
+                            <td>Dividir</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div>
+                    <input type="text" id="cod" placeholder="Cod. Seleção"/> 
+                </div>
+                <textarea id="resultado" cols="1" rows="1" disabled></textarea>
+            </div>
+            <div class="card-stats">
+                <div class="stat">
+                    <div>
+                        <input class="input1" type="button" value="Calcular" id="calc" onclick="calcular()"/>
+                        <input class="input2" type="button" value="Limpar" id="calc" onclick="reset()"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="questao4.css">
+    <script src="questao4.js"></script>
+    <title>4º Questão</title>
+</head>
+<body>
+    <form action="" name="compra" id="formCompra">
+        <div class="container">
+            <div class="card-text">
+                <div class="link">
+                    </br>
+                    <a href="../questoes.html">HOME</a>
+                </div>
+                <div>
+                    <input type="text" id="valorCompra" placeholder="Valor da compra"/>
+                    <input class="btn" type="button" value="Pagar" onclick="pagar()"/>
+                    <input class="btn" type="reset" value="Limpar" />
+                </div>
+                <div class="btnValores">
+                    <input class="btn"  type="button" value="A Vista" onclick="pagarAVista()"/>
+                    <input type="text" id="aVista" disabled></input>
+                </div>
+                <div class="btnValores">
+                    <input class="btn" type="button" value="Em 3x" onclick="pagarPrazo3x()"/>
+                    <input type="text" id="prazo3x" disabled></textarea>
+                </div>
+                <div class="btnValores">
+                    <input class="btn" type="button" value="Em 5x" onclick="pagarPrazo5x()"/>
+                    <input type="text" id="prazo5x" disabled></textarea>
+                </div>
+                <div class="result">
+                    <textarea name="resultado" id="resultado" disabled></textarea>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
